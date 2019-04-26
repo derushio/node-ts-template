@@ -8,9 +8,14 @@ function build() {
     clean && $(npm bin)/webpack
 }
 
-function dev() {
-    clean && $(npm bin)/webpack && node dist/main.bundle.js
+function start() {
+    node dist/main.bundle.js
 }
+
+function dev() {
+    build && start
+}
+
 
 function build_typedoc() {
     typedoc --name "$1" --mode 'file' --out './document/typedoc' './src'
