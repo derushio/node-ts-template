@@ -1,4 +1,4 @@
-import * as nodeExternals from 'webpack-node-externals';
+import 'webpack-node-externals';
 import * as sourceMapSupport from 'source-map-support';
 
 import * as _ from 'lodash';
