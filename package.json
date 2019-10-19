@@ -1,7 +1,7 @@
 {
     "name": "node-ts-template",
     "version": "1.0.0",
-    "main": "index.js",
+    "main": "./dist/main.bundle.js",
     "license": "MIT",
     "scripts": {
         "clean": "./scripts.sh clean",
