@@ -12,6 +12,7 @@
         "allowSyntheticDefaultImports": true,
         "resolveJsonModule": true,
         "sourceMap": true,
+        "declaration": false,
         "baseUrl": ".",
         "types": [],
         "paths": {
