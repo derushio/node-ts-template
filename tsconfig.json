@@ -13,6 +13,7 @@
         "resolveJsonModule": true,
         "sourceMap": true,
         "declaration": false,
+        "declarationDir": "types",
         "baseUrl": ".",
         "types": [],
         "paths": {
