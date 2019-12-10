@@ -1,6 +1,8 @@
-node_modules
-dist
-document
+/node_modules
+/dist
+/document
+/types
+
 yarn-error.log
 yarn.lock
 
