@@ -2,13 +2,15 @@ FROM node:10 AS build-env
 ARG NODE_ENV
 
 RUN apt update
-RUN apt install -y rsync
-RUN npm install -g yarn
+RUN apt install -y apt-transport-https
+RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
+RUN echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
+RUN apt update
+RUN apt install -y rsync yarn
 
 ENV SV_FRONTEND_DIR "/opt/frontend"
 ADD "./" "$SV_FRONTEND_DIR/"
 WORKDIR "$SV_FRONTEND_DIR"
-RUN yarn install --production=false
 RUN yarn build
 
 # for webapp
