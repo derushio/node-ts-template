@@ -20,8 +20,12 @@ RUN yarn build
 # RUN if [ "$NODE_ENV" != "development" ]; then \
 #     yarn install --production=false && \
 #     yarn build && \
-#     rsync -avh "./dist/" "$SV_FRONTEND_DIR/public/"; \
+#     rsync -avh "./dist/" "$SV_FRONTEND_DIR/public/" && \
+#     rm -rf "node_modules"; \
 # fi
+
+# WORKDIR "$SV_FRONTEND_DIR"
+# RUN rm -rf "./webapp"
 
 # --------------------------------------------------------------
 
