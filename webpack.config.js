@@ -4,16 +4,17 @@ const dotenv = require('dotenv');
  * 環境設定
  * .envが共通ファイル、.env.localが個人用ファイル
  */
-const env = Object.assign({},
+const env = Object.assign(
+    {},
     dotenv.config({ path: '.env' }).parsed || {},
-    dotenv.config({ path: '.env.local' }).parsed || {});
+    dotenv.config({ path: '.env.local' }).parsed || {},
+);
 
 /**
  * ビルド環境
  */
-env.NODE_ENV = (env.NODE_ENV === 'production')
-    ? env.NODE_ENV
-    : process.env.NODE_ENV;
+env.NODE_ENV =
+    env.NODE_ENV === 'production' ? env.NODE_ENV : process.env.NODE_ENV;
 console.log('NODE_ENV:', env.NODE_ENV);
 
 const path = require('path');
@@ -43,7 +44,7 @@ module.exports = {
     entry: {
         main: path.resolve(srcPath, 'main.ts'),
     },
-    externals: [ nodeExternals() ],
+    externals: [nodeExternals()],
 
     output: {
         path: distPath,
@@ -52,7 +53,7 @@ module.exports = {
     },
 
     resolve: {
-        extensions: [ '.js', '.ts', '.json' ],
+        extensions: ['.js', '.ts', '.json'],
         alias: {
             '@': path.resolve(srcPath),
         },
@@ -62,14 +63,22 @@ module.exports = {
         rules: [
             {
                 test: /\.ts$/,
-                use: [ 'babel-loader', 'ts-loader', 'eslint-loader' ],
+                use: [
+                    'babel-loader',
+                    'ts-loader',
+                    {
+                        loader: 'eslint-loader',
+                        options: {
+                            emitWarning: true,
+                            failOnWarning: true,
+                        },
+                    },
+                ],
             },
         ],
     },
 
-    plugins: [
-        new webpack.DefinePlugin({}),
-    ],
+    plugins: [new webpack.DefinePlugin({})],
 
-    devtool: isProduct? false: '#source-map',
+    devtool: isProduct ? false : '#source-map',
 };

@@ -1,6 +1,0 @@
-{
-    "defaultSeverity": "warning",
-    "linterOptions": {
-        "exclude": [ "node_modules/**", "dist/**", "**/*.json", "tests/**/*.d.ts" ]
-    }
-}
