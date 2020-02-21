@@ -6,7 +6,7 @@ const port = 8080;
 const execPath = path.dirname(process.argv[1]);
 const publicPath = path.resolve(execPath, '../public');
 
-export async function initServer() {
+export async function initServer(): Promise<void> {
     const server = express();
     server.use(bodyParser.urlencoded({ extended: true }));
     server.use(bodyParser.json());

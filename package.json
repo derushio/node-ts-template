@@ -15,27 +15,31 @@
         "body-parser": "^1.19.0",
         "express": "^4.17.1",
         "lodash": "^4.17.15",
-        "typescript": "^3.7.5"
+        "typescript": "^3.8.2"
     },
     "devDependencies": {
-        "@babel/core": "^7.8.3",
+        "@babel/core": "^7.8.4",
         "@babel/plugin-proposal-optional-chaining": "^7.8.3",
         "@types/express": "^4.17.2",
         "@types/lodash": "^4.14.149",
-        "@types/node": "^13.1.8",
-        "@types/source-map-support": "^0.5.0",
-        "@types/webpack-node-externals": "^1.7.0",
+        "@types/node": "^13.7.4",
+        "@types/source-map-support": "^0.5.1",
+        "@types/webpack-node-externals": "^1.7.1",
+        "@typescript-eslint/eslint-plugin": "^2.20.0",
+        "@typescript-eslint/parser": "^2.20.0",
         "babel-loader": "^8.0.6",
         "dotenv": "^8.2.0",
         "eslint": "^6.8.0",
-        "rimraf": "^3.0.0",
+        "eslint-config-prettier": "^6.10.0",
+        "eslint-loader": "^3.0.3",
+        "eslint-plugin-prettier": "^3.1.2",
+        "prettier": "^1.19.1",
+        "rimraf": "^3.0.2",
         "source-map-support": "^0.5.16",
         "ts-loader": "^6.2.1",
-        "tslint-loader": "^3.6.0",
-        "tslint": "^5.20.1",
-        "typedoc": "^0.16.7",
-        "webpack-cli": "^3.3.10",
-        "webpack-node-externals": "^1.7.2",
-        "webpack": "^4.41.5"
+        "typedoc": "^0.16.10",
+        "webpack": "^4.41.6",
+        "webpack-cli": "^3.3.11",
+        "webpack-node-externals": "^1.7.2"
     }
 }
