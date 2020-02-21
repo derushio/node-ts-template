@@ -4,8 +4,12 @@ function clean() {
     $(npm bin)/rimraf './dist/*'
 }
 
+function lint() {
+    eslint ./src/**/*
+}
+
 function build() {
-    clean && $(npm bin)/webpack
+    yarn lint && clean && $(npm bin)/webpack
 }
 
 function start() {

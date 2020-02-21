@@ -14,6 +14,7 @@
         "project": "./tsconfig.json"
     },
     "rules": {
+        "no-async-promise-executor": 0,
         "@typescript-eslint/no-explicit-any": 0
     }
 }

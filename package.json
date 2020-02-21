@@ -5,6 +5,7 @@
     "license": "MIT",
     "scripts": {
         "clean": "./scripts.sh clean",
+        "lint": "./scripts.sh lint",
         "build": "./scripts.sh build",
         "start": "./scripts.sh start",
         "dev": "./scripts.sh dev",

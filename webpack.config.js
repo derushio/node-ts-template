@@ -63,17 +63,7 @@ module.exports = {
         rules: [
             {
                 test: /\.ts$/,
-                use: [
-                    'babel-loader',
-                    'ts-loader',
-                    {
-                        loader: 'eslint-loader',
-                        options: {
-                            emitWarning: true,
-                            failOnWarning: true,
-                        },
-                    },
-                ],
+                use: ['babel-loader', 'ts-loader'],
             },
         ],
     },
