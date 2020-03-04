@@ -5,7 +5,7 @@
  */
 export async function astimeout(
     millisec: number,
-    func?: () => any,
+    func?: () => Promise<void>,
 ): Promise<void> {
     return await new Promise<void>((resolve, reject) => {
         setTimeout(async () => {
@@ -29,7 +29,7 @@ export async function astimeout(
  */
 export async function aswait(
     millisec: number,
-    func?: () => any,
+    func?: () => Promise<void>,
 ): Promise<void> {
     return await new Promise<void>(async (resolve, reject) => {
         try {
