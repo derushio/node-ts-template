@@ -5,7 +5,7 @@ function clean() {
 }
 
 function lint() {
-    eslint ./src/**/*
+    eslint ./src/**/*.ts
 }
 
 function build() {
