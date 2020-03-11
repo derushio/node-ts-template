@@ -50,6 +50,8 @@ module.exports = {
         path: distPath,
         filename: '[name].bundle.js',
         publicPath: './',
+        // library: process.env.PROJECT_NAME,
+        // libraryTarget: 'umd',
     },
 
     resolve: {
