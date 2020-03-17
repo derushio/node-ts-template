@@ -16,7 +16,7 @@
         "declarationDir": "types",
         "skipLibCheck": true,
         "baseUrl": ".",
-        "types": [],
+        "types": ["jest"],
         "paths": {
             "@/*": ["src/*"]
         },
