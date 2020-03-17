@@ -25,42 +25,42 @@ export default class Logger {
 
     public log(message?: any, ...optionalParams: any[]): void {
         if (this.logLevel >= LOG_LEVEL.LOG) {
-            window.console.log(message, ...optionalParams);
+            console.log(message, ...optionalParams);
             this.logger(LOG_LEVEL.LOG, message, optionalParams);
         }
     }
 
     public info(message?: any, ...optionalParams: any[]): void {
         if (this.logLevel >= LOG_LEVEL.INFO) {
-            window.console.info(message, ...optionalParams);
+            console.info(message, ...optionalParams);
             this.logger(LOG_LEVEL.INFO, message, optionalParams);
         }
     }
 
     public debug(message?: any, ...optionalParams: any[]): void {
         if (this.logLevel >= LOG_LEVEL.DEBUG) {
-            window.console.debug(message, ...optionalParams);
+            console.debug(message, ...optionalParams);
             this.logger(LOG_LEVEL.DEBUG, message, optionalParams);
         }
     }
 
     public table(...tabularData: any[]): void {
         if (this.logLevel >= LOG_LEVEL.DEBUG) {
-            window.console.table(tabularData);
+            console.table(tabularData);
             this.logger(LOG_LEVEL.DEBUG, tabularData);
         }
     }
 
     public warn(message?: any, ...optionalParams: any[]): void {
         if (this.logLevel >= LOG_LEVEL.WARN) {
-            window.console.warn(message, ...optionalParams);
+            console.warn(message, ...optionalParams);
             this.logger(LOG_LEVEL.WARN, message, optionalParams);
         }
     }
 
     public error(message?: any, ...optionalParams: any[]): void {
         if (this.logLevel >= LOG_LEVEL.ERROR) {
-            window.console.error(message, ...optionalParams);
+            console.error(message, ...optionalParams);
             this.logger(LOG_LEVEL.ERROR, message, optionalParams);
         }
     }
