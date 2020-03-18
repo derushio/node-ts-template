@@ -11,7 +11,7 @@ RUN apt install -y rsync yarn
 ENV SV_FRONTEND_DIR "/opt/frontend"
 ADD "./" "$SV_FRONTEND_DIR/"
 WORKDIR "$SV_FRONTEND_DIR"
-RUN yarn; yarn build
+RUN yarn install --production=false && yarn build
 
 # for webapp
 # ENV SV_WEBAPP_DIR "/opt/webapp"
