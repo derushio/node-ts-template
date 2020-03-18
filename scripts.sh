@@ -5,11 +5,11 @@ function clean() {
 }
 
 function lint() {
-    eslint ./src/**/*.ts
+    npx eslint ./src/**/*.ts
 }
 
 function build() {
-    yarn lint && clean && $(npm bin)/webpack
+    lint && clean && $(npm bin)/webpack
 }
 
 function start() {
